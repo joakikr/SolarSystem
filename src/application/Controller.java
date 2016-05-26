@@ -182,34 +182,34 @@ public class Controller implements Initializable, Commons {
 	}
 	
 	private void drawSolarSystem(GraphicsContext gc) {
-        // === Draw on sun ===
-        Star sun = (Star) solarSystem.get(0);
-    	gc.drawImage(sun.icon, APP_WIDTH/2.0 - sun.iconSize/2.0, APP_HEIGHT/2.0 - sun.iconSize/2.0);
-        
-        // === Draw on planets ===
-    	double distance = STAR_SPACING;
-        for(int i = 1; i < solarSystem.size(); i++) {
-        	OrbitalElement elem = solarSystem.get(i);
-        	
-        	// === Skip non planets ===
-        	if(!(elem instanceof Planet)) continue;
-        	
-        	// === Normalize position and scale by distance from sun ===
-        	Point3D point = elem.position.normalize();
-        	double newX = point.getX() * distance; 
-        	double newY = -1 * point.getY() * distance; // Mirror on y-axis to reflect results from www.theplanetstoday.com
-
-        	// === Draw planetary orbit (Readjusted to circle, index steps away from unit circle) ===
-        	gc.strokeOval(APP_WIDTH/2.0 - distance, APP_HEIGHT/2.0 - distance, 2*distance, 2*distance);
-        	
-        	// === Draw on planets name ===
-    		gc.fillText(elem.name, APP_WIDTH/2.0 + newX, APP_HEIGHT/2.0 + newY + elem.iconSize * 0.75);
-        		
-        	// === Draw on planets icon ===
-        	gc.drawImage(elem.icon, APP_WIDTH/2.0 + newX - elem.iconSize/2.0, APP_HEIGHT/2.0 + newY - elem.iconSize/2.0);
-        
-        	distance += PLANET_SPACING;
-        }
+		// === Draw on sun ===
+		Star sun = (Star) solarSystem.get(0);
+		gc.drawImage(sun.icon, APP_WIDTH/2.0 - sun.iconSize/2.0, APP_HEIGHT/2.0 - sun.iconSize/2.0);
+		
+		// === Draw on planets ===
+		double distance = STAR_SPACING;
+		for(int i = 1; i < solarSystem.size(); i++) {
+			OrbitalElement elem = solarSystem.get(i);
+			
+			// === Skip non planets ===
+			if(!(elem instanceof Planet)) continue;
+			
+			// === Normalize position and scale by distance from sun ===
+			Point3D point = elem.position.normalize();
+			double newX = point.getX() * distance; 
+			double newY = -1 * point.getY() * distance; // Mirror on y-axis to reflect results from www.theplanetstoday.com
+		
+			// === Draw planetary orbit (Readjusted to circle, index steps away from unit circle) ===
+			gc.strokeOval(APP_WIDTH/2.0 - distance, APP_HEIGHT/2.0 - distance, 2*distance, 2*distance);
+			
+			// === Draw on planets name ===
+			gc.fillText(elem.name, APP_WIDTH/2.0 + newX, APP_HEIGHT/2.0 + newY + elem.iconSize * 0.75);
+				
+			// === Draw on planets icon ===
+			gc.drawImage(elem.icon, APP_WIDTH/2.0 + newX - elem.iconSize/2.0, APP_HEIGHT/2.0 + newY - elem.iconSize/2.0);
+		
+			distance += PLANET_SPACING;
+		}
 	}
 	
 	private void drawDate(DateTime date, GraphicsContext gc) {
@@ -240,10 +240,10 @@ public class Controller implements Initializable, Commons {
 		
 		// === Style Graphics Context ===
 		GraphicsContext gc = ((Canvas) root.lookup("#canvas")).getGraphicsContext2D();
-        gc.setStroke(Color.web("#FF8109"));
-        gc.setTextAlign(TextAlignment.CENTER);
-        gc.setTextBaseline(VPos.CENTER);
-        gc.setFill(Color.OLDLACE);
+		gc.setStroke(Color.web("#FF8109"));
+		gc.setTextAlign(TextAlignment.CENTER);
+		gc.setTextBaseline(VPos.CENTER);
+		gc.setFill(Color.OLDLACE);
 
 		// === Setup ===
 		Slider dateRate = ((Slider) root.lookup("#dateRate"));

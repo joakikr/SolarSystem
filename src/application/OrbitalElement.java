@@ -46,12 +46,12 @@ public abstract class OrbitalElement implements Coordinate, Commons {
 	public Point3D position;
 	
 	/**
-     * N = longitude of the ascending node (large omega)
-     * i = inclination to the ecliptic (plane of the Earth's orbit)
-     * w = argument of perihelion (small omega)
-     * a = semi-major axis, or mean distance from Sun
-     * e = eccentricity (0=circle, 0-1=ellipse, 1=parabola)
-     * M = mean anomaly (0 at perihelion; increases uniformly with time)
+	 * N = longitude of the ascending node (large omega)
+	 * i = inclination to the ecliptic (plane of the Earth's orbit)
+	 * w = argument of perihelion (small omega)
+	 * a = semi-major axis, or mean distance from Sun
+	 * e = eccentricity (0=circle, 0-1=ellipse, 1=parabola)
+	 * M = mean anomaly (0 at perihelion; increases uniformly with time)
 	 * v = true anomaly (angle between position and perihelion)
 	 * E = eccentric anomaly
 	 * n = angle the planet traverses on average per day, as seen from the Sun

@@ -17,7 +17,7 @@ public class Main extends Application implements Commons {
 		
 		// === Start the show! ===
 		Scene scene = new Scene(loader.load(), APP_WIDTH, APP_HEIGHT);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource(CSS_PATH).toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Solarsystem");
 		primaryStage.setResizable(false);
