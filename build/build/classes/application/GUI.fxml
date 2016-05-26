@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<Pane fx:controller="application.Controller" 
+	fx:id="root" xmlns:fx="http://javafx.com/fxml">
+	<StackPane fx:id="container">
+		<Canvas fx:id="canvas" width="800" height="800">
+		</Canvas>
+
+		<Slider fx:id="dateRate" min="-10" max="10" value="0" maxWidth="200"
+			majorTickUnit="10" showTickLabels="true" showTickMarks="true"
+			StackPane.alignment="bottom_left"></Slider>
+
+		<Label fx:id="date" StackPane.alignment="bottom_right">
+		</Label>
+		
+		<Button fx:id="tsp" StackPane.alignment="top_left" text="SHOW PATH">
+		</Button>
+	</StackPane>
+</Pane>
