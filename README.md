@@ -1,4 +1,4 @@
-<b><h1>SolarsystemFX</h1></b><br>
+<b><h1>SolarSystem</h1></b><br>
 View the planets movement from the past, the present and in the future with this little Java FX application.
 
 <b>Calculations:</b><br>
